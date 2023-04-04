@@ -5,20 +5,20 @@ import Home from "./Routes/Home";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact"
 import Favs from "./Routes/Favs"
+import Form from "./Components/Form";
 
 
 function App() {
   return (
     <div className="App">
-      <Routes>
+       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/dentist/:id" element={<Detail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/favs" element={<Favs />} />
-      </Routes>
-
-      <Navbar/>
-      <Footer/>
+      </Routes> 
+        <Navbar/>
+        <Footer/> 
     </div>
   );
 }
