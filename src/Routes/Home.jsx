@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Card from '../Components/Card'
+import { useGlobalStates } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-    const [dentists, setDentists] = useState([])
-
-    const url = 'https://jsonplaceholder.typicode.com/users'
-
-    useEffect(()=>{
-      fetch(url)
-      .then(res => res.json())
-      .then(data => console.log(setDentists(data)))
-      console.log(dentists)
-    },[])
+    const {dentists} = useGlobalStates();
 
     return (
       <main className="" >

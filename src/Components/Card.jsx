@@ -9,9 +9,9 @@ const Card = ({ name, username, id }) => {
   }
 
   return (
-    <div className="card">
+    <div className="card" key={id}>
         {/* En cada card deberan mostrar en name - username y el id */}
-        <Link key={id} to={'/dentist/' + id}>
+        <Link to={'/dentist/' + id}>
         <h3>{name}</h3>
         <h3>{username}</h3>
         <h3>{id}</h3>
